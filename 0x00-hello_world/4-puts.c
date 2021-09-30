@@ -1,5 +1,5 @@
 #include <stdio.h>
-/*
+/**
  * This is the main function for 4-name
  */
 int main(void)
