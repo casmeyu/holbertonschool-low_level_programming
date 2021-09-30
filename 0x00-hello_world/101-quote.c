@@ -1,6 +1,6 @@
-#include <stdio.h>
+#include <unistd.h>
 /**
- * main -This is the main function for printinf without printf or puts
+ * main - This is the main function for printinf without printf or puts
  *
  * Returns: the number 1
  */
