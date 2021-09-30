@@ -2,7 +2,7 @@
 /**
  * main - This is the main function for printinf without printf or puts
  *
- * Returns: the number 1
+ * Return: the number 1
  */
 int main(void)
 {
