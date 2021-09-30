@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- * This is the main function for 4-name
+ * main - his is the main function for 4-name
  *
  * Return: the number 0
  */
