@@ -1,14 +1,14 @@
 #include <stdio.h>
 /**
- * main - this is the main function
+ * main - this is the main function for printing the alphabet
  *
  * Return: the number 0
  */
-int main(void)
+int main (void)
 {
 	int c = 'a';
 
-	for (c; c <= 'z'; c++)
+	for (c; c < 'z'; c++)
 	{
 		putchar(c);
 	}
