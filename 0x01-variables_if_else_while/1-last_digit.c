@@ -14,7 +14,7 @@ int main(void)
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
-	printf("%d is the second field", n % 10);
+	printf("Last digit of %d is %d \n", n, n % 10);
 	/* your code goes there */
 
 	return (0);
