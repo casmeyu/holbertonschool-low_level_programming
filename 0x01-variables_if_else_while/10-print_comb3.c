@@ -8,15 +8,15 @@
 int main(void)
 {
 	int d1, d2;
-	
-	for (d1 = 48; d1 < 58; d1 ++)
+
+	for (d1 = 48; d1 < 58; d1++)
 	{
 		for (d2 = 48; d2 < 58; d2++)
 		{
 			if (d2 > d1)
 			{
 				putchar(d1);
-                                putchar(d2);
+				putchar(d2);
 				if (d1 >= 56)
 				{
 					putchar('\n');
@@ -24,7 +24,7 @@ int main(void)
 				else
 				{
 					putchar(',');
-                                	putchar(' ');
+					putchar(' ');
 				}
 			}
 		}
