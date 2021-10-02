@@ -16,23 +16,23 @@ int main(void)
 			if (d > c)
 			{
 				for (u = 48; u < 58; u++)
-                        	{
+				{
 					if (u > d)
 					{
-                                		putchar(c);
-                                		putchar(d);
-                                		putchar(u);
+						putchar(c);
+						putchar(d);
+						putchar(u);
 						if (u == 57 && d == 56 && c == 55)
 						{
 							putchar('\n');
 						}
 						else
 						{
-                                			putchar(',');
+							putchar(',');
 							putchar(' ');
 						}
 					}
-                        	}
+				}
 
 			}
 		}
