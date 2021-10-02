@@ -13,27 +13,25 @@ int main(void)
 	{
 		for (d = 48; d < 58; d++)
 		{
-			if (d > c)
+			if (c >= d)
+				continue;
+			for (u = 48; u < 58; u++)
 			{
-				for (u = 48; u < 58; u++)
-				{
-					if (u > d)
-					{
-						putchar(c);
-						putchar(d);
-						putchar(u);
-						if (u == 57 && d == 56 && c == 55)
-						{
-							putchar('\n');
-						}
-						else
-						{
-							putchar(',');
-							putchar(' ');
-						}
-					}
-				}
+				if (d >= u)
+					continue;
+				putchar(c);
+				putchar(d);
+				putchar(u);
 
+				if (u == 57 && d == 56 && c == 55)
+				{
+					putchar('\n');
+				}
+				else
+				{
+					putchar(',');
+					putchar(' ');
+				}
 			}
 		}
 	}
