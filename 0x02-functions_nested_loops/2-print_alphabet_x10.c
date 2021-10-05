@@ -1,12 +1,10 @@
 #include "main.h"
 /**
- * main - This function prints the alphabet 10 times
+ * print_alphabet_x10 - This function prints the alphabet 10 times
  * using the _putchar function in the main.h header
  *
- * Return: the number 0
- *
  */
-int main(void)
+void print_alphabet_x10(void)
 {
 	int i;
 
@@ -20,5 +18,4 @@ int main(void)
 		}
 		_putchar('\n');
 	}
-	return (0);
 }
