@@ -13,29 +13,34 @@ int main(void)
 	{
 		for (u1 = 48; u1 < 58; u1++)
 		{
+			if (d2 < d1)
+				continue;
 			for (d2 = 48; d2 < 58; d2++)
 			{
 				for (u2 = 48; u2 < 58; u2++)
 				{
-					if (d2 < d1 && u2 < u1)
+					if (u2 < u1)
 						continue;
+					
 					putchar(d1);
 					putchar(u1);
 					putchar(' ');
 					putchar(d2);
 					putchar(u2);
-					if (u1 == 57 && d1 == 57 && u2 == 57 && d2 == 57)
-					{
-						putchar('\n');
-					}
-					else
+					if (u2 != 57 || d2 != 57 || u1 != 56 || d1 != 57)
 					{
 						putchar(',');
 						putchar(' ');
 					}
+					else
+					{
+						putchar('\n');
+					}
+				
 				}
+				
 			}
 		}
-	}	
+	}
 	return (0);
 }
