@@ -5,7 +5,6 @@
  * @n: its the entering number
  *
  * Return: 1, 0 or -1 depending on the sign
- *
  */
 int print_sign(int n)
 {
