@@ -3,7 +3,7 @@
  * _isalpha - this function takes a character and dictates
  * if it is alphabetic of not
  *
- * @c - character
+ * @c: character
  *
  * Return: 0 or 1 (not alpha - alpha)
  *
