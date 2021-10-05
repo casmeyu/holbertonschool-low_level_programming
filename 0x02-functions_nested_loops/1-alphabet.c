@@ -1,4 +1,5 @@
 #include "main.h"
+void print_alphabet(void);
 /**
  * main - This funcion prints a lowercase alphabet and its a header file
  *
@@ -9,7 +10,7 @@ int main(void)
 {
 	int c;
 
-	for (c = 'a'; c <= 'z'; c++)
+	for (c = 97; c <= 122; c++)
 	{
 		_putchar(c);
 	}
