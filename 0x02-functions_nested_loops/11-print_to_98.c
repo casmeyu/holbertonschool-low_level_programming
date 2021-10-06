@@ -3,7 +3,7 @@
 /**
  * print_to_98 - prints all the natural numbers from n to 98
  *
- * @n: the staring point
+ * @n: starting number
  *
  */
 void print_to_98(int n)
