@@ -10,27 +10,17 @@ void print_to_98(int n)
 {
 	if (n > 98)
 	{
-		int i;
-
-		for (i = n; i >= 98; i--)
+		for (; n > 98; n--)
 		{
-			int c;
-			
-			c = i;
-			while (c > 10)
-			{
-				_putchar((c / 10) + '0');
-				c = c / 10;
-				
-			}
+			printf("%d, ", n);
 		}
 	}
-	_putchar('\n');
-}
-
-int main(void)
-{
-	print_to_98(120);
-
-	return (0);
+	else if (n < 98)
+	{
+		for (; n < 98; n++)
+		{
+			printf("%d, ", n);
+		}
+	}
+	printf("%d\n", n);
 }
