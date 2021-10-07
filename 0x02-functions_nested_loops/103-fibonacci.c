@@ -16,7 +16,8 @@ int main(void)
 		actual = anterior + actual;
 		if (actual > 4000000)
 			break;
-		if (actual % 2 == 0){
+		if (actual % 2 == 0)
+		{
 			res = res + actual;
 		}
 		anterior = actual - anterior;
