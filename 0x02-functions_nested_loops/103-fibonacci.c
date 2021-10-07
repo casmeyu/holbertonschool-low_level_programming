@@ -6,8 +6,9 @@
  */
 int main(void)
 {
-	int cont, actual, anterior;
+	int cont, actual, anterior, res;
 
+	res = 0;
 	actual = 1;
 	anterior = 0;
 	for (cont = 1; cont <= 50; cont++)
@@ -15,8 +16,11 @@ int main(void)
 		actual = anterior + actual;
 		if (actual > 4000000)
 			break;
-		printf("%d, ", actual);
+		if (actual % 2 == 0){
+			res = res + actual;
+		}
 		anterior = actual - anterior;
 	}
+	printf("%d\n", res);
 	return (0);
 }
