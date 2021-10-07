@@ -4,7 +4,7 @@
  * @a: entering int
  * @b: entering int
  *
- * Returns: int a*b
+ * Return: int a*b
  */
 int mul(int a, int b)
 {
