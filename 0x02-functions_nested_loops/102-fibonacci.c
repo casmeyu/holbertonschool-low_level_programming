@@ -20,17 +20,6 @@ int main(void)
 		{
 			res = res / 10;
 		}
-		/*
-		if (res == 1 || res == 2)
-		{
-			printf("%ld", actual);
-
-			if (cont == 50)
-				putchar('\n');
-			else
-				printf(", ");
-		}
-		*/
 		printf("%ld", actual);
 
 		if (cont == 49)
