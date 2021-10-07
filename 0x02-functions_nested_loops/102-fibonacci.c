@@ -7,6 +7,7 @@
 int main(void)
 {
 	int cont, actual, anterior;
+
 	actual = 1;
 	anterior = 0;
 	for (cont = 1; cont <= 50; cont++)
