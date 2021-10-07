@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * print-diagonal - prints a diagonal line based on entering int
+ * print_diagonal - prints a diagonal line based on entering int
  *
  * @n: entering int for delimiting line
  */
