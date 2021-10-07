@@ -6,13 +6,13 @@
  */
 int main(void)
 {
-	long actual, anterior;
-	int cont, res;
+	unsigned long actual, anterior, res;
+	int cont;
 
 	res = 0;
 	actual = 1;
 	anterior = 0;
-	for (cont = 1; cont <= 50; cont++)
+	for (cont = 0; cont < 50; cont++)
 	{
 		actual = anterior + actual;
 		res = actual;
@@ -20,15 +20,23 @@ int main(void)
 		{
 			res = res / 10;
 		}
+		/*
 		if (res == 1 || res == 2)
 		{
 			printf("%ld", actual);
 
-			if (actual == 1836311903)
+			if (cont == 50)
 				putchar('\n');
 			else
 				printf(", ");
 		}
+		*/
+		printf("%ld", actual);
+
+		if (cont == 49)
+			putchar('\n');
+		else
+			printf(", ");
 
 		anterior = actual - anterior;
 	}
