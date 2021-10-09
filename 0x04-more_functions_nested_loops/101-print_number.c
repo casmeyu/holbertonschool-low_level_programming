@@ -7,21 +7,22 @@
  */
 void print_number(int n)
 {
+	unsigned int pos = n;
 	/* 
 	 * If number is smaller than 0, put a - sign and convert n
 	 */
 	if (n < 0)
 	{
 		_putchar('-');
-		n = -n;
+		pos = -n;
 	}
 
 	/*
 	 * Divide by 10 and recur
 	 */
 	if (n / 10)
-	print_number(n / 10);
+		print_number(pos / 10);
 
-	_putchar(n % 10 + '0');
+	_putchar(pos % 10 + '0');
 }
 
