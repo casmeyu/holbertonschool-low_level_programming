@@ -1,3 +1,4 @@
+#include "main.h"
 #include <stdio.h>
 /**
  * _puts - this functions takes a string pointer and prints it
@@ -10,8 +11,8 @@ void _puts(char *str)
 
 	while (*(str + pos) != 0)
 	{
-		printf("%c", str[pos]);
+		_putchar(str[pos]);
 		pos++;
 	}
-	printf("\n");
+	_putchar('\n');
 }
