@@ -13,6 +13,8 @@ int _strlen(char *s)
 
 	while (*(s + lenght) != 0)
 	{
+
+		_putchar(*(s + lenght))
 		lenght++;
 	}
 
