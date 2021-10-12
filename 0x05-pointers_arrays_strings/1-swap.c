@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- * swap - this functions takes two pointers and waps them
+ * swap_int - this functions takes two pointers and waps their values
  *
  * @a: pointer a
  * @b: pointer b
