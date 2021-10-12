@@ -3,7 +3,7 @@
  * _strlen - this function takes a string pointer and returns
  * the lenght
  *
- * @*s: the pointer to the string
+ * @s: the pointer to the string
  *
  * Return: number of indexes
  */
