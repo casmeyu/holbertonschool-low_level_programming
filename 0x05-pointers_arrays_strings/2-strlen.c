@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "main.h"
 /**
  * _strlen - this function takes a string pointer and returns
  * the lenght
@@ -13,8 +13,6 @@ int _strlen(char *s)
 
 	while (*(s + lenght) != 0)
 	{
-
-		_putchar(*(s + lenght))
 		lenght++;
 	}
 
