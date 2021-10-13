@@ -17,13 +17,14 @@ void rev_string(char *s)
 	for (last = len; last >= 0; last--)
 	{
 		if (last == len / 2)
+		{
 			break;
+		}
 		else
 		{
-			aux = *(s + (len - last));;
+			aux = *(s + (len - last));
 			*(s + (len - last)) = *(s + last);
 			*(s + last) = aux;
 		}
 	}
-
 }
