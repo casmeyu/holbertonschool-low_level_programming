@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 /**
  * rev_string - tankes a string and reverse its value
  *
