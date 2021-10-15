@@ -17,8 +17,11 @@ int _strcmp(char *s1, char *s2)
 	res = 0;
 	for (pos = 0; s1[pos] != 0 && s2[pos] != 0; pos++)
 	{
-		res = s1[pos] - s2[pos];
-		break;
+		if (s1[pos] != s2[pos])
+		{
+			res = s1[pos] - s2[pos];
+			break;
+		}
 	}
 
 	return (res);
