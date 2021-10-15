@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * strncat - takes two strings and an n as parameters
+ * _strncat - takes two strings and an n as parameters
  * and concatenates the src string to dest string but only
  * for n bytes
  *
@@ -22,7 +22,7 @@ char *_strncat(char *dest, char *src, int n)
 		for (pos_src = 0; src[pos_src] != 0; pos_src++)
 		{
 			len_dest++;
-			
+
 			if (pos_src != n)
 				dest[len_dest] = src[pos_src];
 			else
