@@ -4,7 +4,7 @@
  * leet - this functions takes a strings and encodes it
  * according to leet
  *
- * @s: entering string
+ * @str: entering string
  *
  * Return: the processed string
  */
