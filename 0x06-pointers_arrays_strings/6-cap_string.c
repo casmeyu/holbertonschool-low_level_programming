@@ -19,22 +19,10 @@ char *cap_string(char *str)
 		for (pos_del = 0; del[pos_del] != 0; pos_del++)
 		{
 			if (str[pos_str] == del[pos_del])
-			{
-				printf("entered first if\nstr value: %c\n del value: %c\n\n", str[pos_str], del[pos_del]);
-
-
-				if (str[pos_str++] >= 'a' && str[pos_str++] <= 'z')
-				{
-					printf("entered second if\nstr value: %c\n del value: %c\n\n", str[pos_str], del[pos_del]);
-
-					str[pos_str++] -= 32;
-				
-				}
-
-			}
+				if (str[pos_str + 1] >= 'a' && str[pos_str + 1] <= 'z')
+					str[pos_str + 1] -= 32;
 
 		}
-
 	}
 
 	return (str);
