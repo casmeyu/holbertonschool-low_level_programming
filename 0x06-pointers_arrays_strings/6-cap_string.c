@@ -15,7 +15,7 @@ char *cap_string(char *str)
 		63, 34, '(', ')', '{', '}'};
 
 	if (pos_str == 0 && str[pos_str] >= 'a' && str[pos_str] <= 'z')
-        	str[pos_str] -= 32;
+		str[pos_str] -= 32;
 
 	for (pos_str += 1; str[pos_str] != 0; pos_str++)
 	{
@@ -24,7 +24,6 @@ char *cap_string(char *str)
 			if (str[pos_str] == del[pos_del])
 				if (str[pos_str + 1] >= 'a' && str[pos_str + 1] <= 'z')
 					str[pos_str + 1] -= 32;
-
 		}
 	}
 
