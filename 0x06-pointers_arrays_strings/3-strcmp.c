@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 /**
  * _strcmp - takes two strings and compares the two
  * if string_01 > string_02 return positive int
@@ -13,7 +12,7 @@
  */
 int _strcmp(char *s1, char *s2)
 {
-	int res, pos; /*value_s1, value_s2*/
+	int res, pos;
 
 	res = 0;
 	for (pos = 0; s1[pos] != 0 && s2[pos] != 0; pos++)
