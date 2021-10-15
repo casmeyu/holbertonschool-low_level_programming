@@ -17,7 +17,8 @@ char *leet(char *s)
 	{
 		for (pos_let = 0; letter[pos_let] != 0; pos_let++)
 		{
-			if (letter[pos_let] == s[pos_s])
+			if (letter[pos_let] == s[pos_s] ||
+				(letter[pos_let] - 32) == s[pos_let])
 			{
 				s[pos_s] = (l_value[pos_let] + '0');
 				break;
