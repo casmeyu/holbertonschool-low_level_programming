@@ -12,8 +12,8 @@ char *cap_string(char *str)
 {
 	int pos_str;
 	int pos_del;
-	char del[] = {32, '\n', 9, ',', ';', '.', '!',
-		'\?', '\"', '(', ')', '{', '}'};
+	char del[] = {32, 10, 9, ',', ';', '.', '!',
+		63, 34, '(', ')', '{', '}'};
 
 	for (pos_str = 0; str[pos_str] != 0; pos_str++)
 	{
