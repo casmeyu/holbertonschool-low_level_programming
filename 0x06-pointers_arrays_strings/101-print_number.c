@@ -7,7 +7,6 @@
  */
 void print_number(int n)
 {
-	printf("print number of: %d", n);
 	if (n < 0)
 	{
 		_putchar('-');
