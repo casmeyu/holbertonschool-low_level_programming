@@ -10,23 +10,23 @@
 char *rot13(char *str)
 {
 
-        int pos_str;
-        int pos_rot;
-        char letters[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-        char rot[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+	int pos_str;
+	int pos_rot;
+	char letters[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char rot[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
-        for (pos_str = 0; str[pos_str] != 0; pos_str++)
-        {
-                for (pos_rot = 0; letters[pos_rot] != 0; pos_rot++)
-                {
+	for (pos_str = 0; str[pos_str] != 0; pos_str++)
+	{
+		for (pos_rot = 0; letters[pos_rot] != 0; pos_rot++)
+		{
 
-                        if (str[pos_str] == letters[pos_rot])
-                        {
-                                str[pos_str] = rot[pos_rot];
-                                break;
-                        }
-                }
-        }
+			if (str[pos_str] == letters[pos_rot])
+			{
+				str[pos_str] = rot[pos_rot];
+				break;
+			}
+		}
+	}
 
-        return (str);
+	return (str);
 }
