@@ -18,5 +18,5 @@ char *_strchr(char *s, char c)
 			return (&s[pos]);
 	}
 	/* i already tryed passing s[pos] sice is null at the end*/
-	return (s[pos]);
+	return (&s[pos]);
 }
