@@ -17,5 +17,6 @@ char *_strchr(char *s, char c)
 		if (s[pos] == c)
 			return (&s[pos]);
 	}
-	return (0);
+	/* i already tryed passing s[pos] sice is null at the end*/
+	return (s[pos]);
 }
