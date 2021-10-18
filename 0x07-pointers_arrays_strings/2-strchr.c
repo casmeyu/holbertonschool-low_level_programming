@@ -11,12 +11,12 @@
 char *_strchr(char *s, char c)
 {
 	unsigned int pos = 0;
-
-	for (pos = 0; s[pos] != 0; pos++)
+	for (pos = 0; s && s[pos] != 0; pos++)
 	{
 		if (s[pos] == c)
 			return (&s[pos]);
 	}
-	/* i already tryed passing s[pos] sice is null at the end*/
+
 	return (&s[pos]);
+
 }
