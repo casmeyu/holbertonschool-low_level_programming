@@ -16,7 +16,7 @@ char *_strchr(char *s, char c)
 		pos++;
 
 	if (s[pos] == c)
-		return (&s[pos]); /*chek fail 8*/
+		return (&s[pos]);
 	else
 		return (0);
 }
