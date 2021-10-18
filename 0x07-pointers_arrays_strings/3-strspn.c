@@ -27,7 +27,6 @@ unsigned int _strspn(char *s, char *accept)
 		if (accept[pos_accept] == 0 && count > 0)
 			return (count);
 
-		pos_accept = 0;
 	}
 
 	return (count);
