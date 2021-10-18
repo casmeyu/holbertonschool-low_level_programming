@@ -14,9 +14,9 @@ char *_strchr(char *s, char c)
 
 	for (pos = 0; s[pos] != 0 && s[pos] != c;)
 		pos++;
-	
+
 	if (s[pos] == c)
 		return (&s[pos]); /*chek fail 8*/
 	else
-		return(0);
+		return (0);
 }
