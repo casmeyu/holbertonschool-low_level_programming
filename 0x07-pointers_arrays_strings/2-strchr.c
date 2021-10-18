@@ -11,7 +11,6 @@
 char *_strchr(char *s, char c)
 {
 	unsigned int pos = 0;
-	char *ptr = 0;
 
 	for (pos = 0; s[pos] != 0; pos++)
 	{
