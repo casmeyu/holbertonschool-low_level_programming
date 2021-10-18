@@ -12,10 +12,11 @@ char *_strchr(char *s, char c)
 {
 	unsigned int pos;
 
-	for (pos = 0; s[pos] != 0; pos++)
-	{
-		if (s[pos] == c)
-			return (&s[pos]);
-	}
-	return (&s[pos]);
+	for (pos = 0; s[pos] != 0 && s[pos] != c;)
+		pos++;
+	
+	if (s[pos] == c)
+		return (&s[pos]); /*chek fail 8*/
+	else
+		return(0);
 }
