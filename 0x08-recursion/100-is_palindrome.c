@@ -22,8 +22,21 @@ int palindrome_aux(char *s, int i, int e)
 
 	return (1);
 }
+/**
+ * count_rec - strlen but recursively
+ *
+ * @s: string to check
+ * @n: counter
+ *
+ * Return: the length
+ */
+int count_rec(char *s, int n)
+{
+	if (*s == 0)
+		return (n);
 
-
+	return (count_rec((s + 1), n + 1));
+}
 
 /**
  * is_palindrome - returns 1 if a string is a palindrome and 0 if not
@@ -34,13 +47,11 @@ int palindrome_aux(char *s, int i, int e)
  */
 int is_palindrome(char *s)
 {
-	int len_s;
-
-	for (len_s = 0; s[len_s] != 0;)
-		len_s++;
+	int len_s = 0;
 
 	if (*s == 0)
 		return (1);
 
+	len_s += count_rec(s, len_s);
 	return (palindrome_aux(s, 0, (len_s - 1)));
 }
