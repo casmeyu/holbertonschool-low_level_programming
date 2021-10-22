@@ -11,7 +11,7 @@ int main(int argc, char *argv[])
 {
 	int pos_arg;
 
-	for (pos_arg = 1; pos_arg < argc; pos_arg++)
+	for (pos_arg = 0; pos_arg < argc; pos_arg++)
 	{
 		printf("%s\n", argv[pos_arg]);
 	}
