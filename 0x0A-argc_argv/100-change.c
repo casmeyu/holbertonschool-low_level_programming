@@ -14,13 +14,15 @@ int main(int argc, char *argv[])
 
 	int coin[] = {25, 10, 5, 2, 1};
 	int pos, res = 0;
-	int cents = atoi(argv[1]);
+	int cents;
 
 	if (argc != 2)
 	{
 		printf("Error\n");
 		return (1);
 	}
+
+	cents = atoi(argv[1]);
 
 	for (pos = 0; cents > 0;)
 	{
