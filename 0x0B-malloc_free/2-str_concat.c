@@ -14,12 +14,18 @@ char *str_concat(char *s1, char *s2)
 	int pos, len1 = 0, len2 = 0;
 	char *str;
 
-	/*Iterates over the first string*/
-	for (pos = 0; s1[pos] != 0; pos++)
-		len1++;
-	/*Iterates over the second string*/
-	for (pos = 0; s2[pos] != 0; pos++)
-		len2++;
+	if (s1 != NULL)
+	{
+		/*Iterates over the first string*/
+		for (pos = 0; s1[pos] != 0; pos++)
+			len1++;
+	}
+	if (s2 != NULL)
+	{
+		/*Iterates over the second string*/
+		for (pos = 0; s2[pos] != 0; pos++)
+			len2++;
+	}
 	str = (char *)malloc((sizeof(char) * ((len1) + (len2) + 1)));
 
 	if (str == NULL)
