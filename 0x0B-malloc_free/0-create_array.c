@@ -7,7 +7,7 @@
  * @size: size of the array
  * @c: character to fill memory with
  *
- * Returns: A *ptr to the array or NULL if it fails
+ * Return: A *ptr to the array or NULL if it fails
  */
 char *create_array(unsigned int size, char c)
 {
@@ -17,10 +17,10 @@ char *create_array(unsigned int size, char c)
 	if (!size || !c)
 		return (NULL);
 
-	arr = (char*)malloc((sizeof(char) * size));
+	arr = (char *)malloc((sizeof(char) * size));
 
-	for (pos = 0; pos < size; pos++)
-	       arr[pos] = c;
+	for (pos = 0; pos < size; por++)
+		arr[pos] = c;
 
 	return (arr);
 }
