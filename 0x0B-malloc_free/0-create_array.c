@@ -19,7 +19,7 @@ char *create_array(unsigned int size, char c)
 
 	arr = (char *)malloc((sizeof(char) * size));
 
-	for (pos = 0; pos < size; por++)
+	for (pos = 0; pos < size; pos++)
 		arr[pos] = c;
 
 	return (arr);
