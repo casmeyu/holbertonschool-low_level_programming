@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 #include <stdlib.h>
 /**
  * _strdup - returns a pointer to a newly allocated space in memory,
@@ -19,14 +20,14 @@ char *_strdup(char *str)
 	for (len = 0; str[len] != 0;)
 		len++;
 
-	len -= 1;
+	len--;
 
 	dup = (char *)malloc((sizeof(char) * len));
 
 	if (dup == NULL)
 		return (NULL);
 
-	for (pos = 0; pos < len; pos++)
+	for (pos = 0; pos <= len; pos++)
 	{
 		dup[pos] = str[pos];
 	}
