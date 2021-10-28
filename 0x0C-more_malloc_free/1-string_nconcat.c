@@ -22,8 +22,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		s1 = "";
 	if (!s2)
 		s2 = "";
-	if (n < 0)
-		return (NULL);
 
 	lens1 = strlen(s1);
 	lens2 = strlen(s2);
