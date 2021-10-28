@@ -3,7 +3,7 @@
 #include <string.h>
 /**
  * string_nconcat - concatenates two strings and returns a pointer
- * to a newly allocated memory cointaining 21 followed by the 
+ * to a newly allocated memory cointaining 21 followed by the
  * first n bytes of s2
  *
  * @s1: first string
@@ -16,7 +16,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *p;
 	unsigned int lens1, lens2, pos_s, pos_p = 0;
-	
+
 	if (!s1)
 		s1 = "";
 	if (!s2)
