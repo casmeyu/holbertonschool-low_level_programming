@@ -26,8 +26,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	lens1 = strlen(s1);
 	lens2 = strlen(s2);
 
-	printf("lens1: %d\nlens2: %d\n", lens1, lens2);
-	if (n >= lens2)
+	if (n > lens2)
 		n = lens2;
 
 	p = malloc((lens1 + n) * sizeof(*p) + 1);
