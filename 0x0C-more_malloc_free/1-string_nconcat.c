@@ -28,7 +28,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (n >= lens2)
 		n = lens2;
 
-	p = malloc((lens1 + n) * sizeof(*p));
+	p = malloc((lens1 + n) * sizeof(*p) + 1);
 
 	if (!p)
 		return (NULL);
@@ -44,6 +44,8 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		p[pos_p] = s2[pos_s];
 		pos_p++;
 	}
+
+	p[pos_p] = 0;
 
 	return (p);
 }
