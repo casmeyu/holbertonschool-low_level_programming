@@ -17,11 +17,13 @@ int int_index(int *array, int size, int (*cmp)(int))
 	if (size <= 0)
 		return (-1);
 
-	for (pos = 0; pos < size; pos++)
+	if (cmp && array)
 	{
-		if (cmp(array[pos]))
-			return (pos);
+		for (pos = 0; pos < size; pos++)
+		{
+			if (cmp(array[pos]))
+				return (pos);
+		}
 	}
-
 	return (-1);
 }
