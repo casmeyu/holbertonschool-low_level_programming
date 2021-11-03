@@ -28,7 +28,6 @@ char *_strdup(char *str)
 	{
 		dup[pos] = str[pos];
 	}
-
 	return (dup);
 }
 /**
