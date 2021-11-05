@@ -12,7 +12,7 @@ void print_all(const char * const format, ...)
 	va_list ap;
 	char *separator = "";
 	unsigned int i, j = 0;
-	datatype op[] = {
+	op_t op[] = {
 		{"c", print_char},
 		{"i", print_integer},
 		{"f", print_float},
@@ -24,9 +24,9 @@ void print_all(const char * const format, ...)
 	while (format != NULL && format[j] != '\0')
 	{
 		i = 0;
-		while (op[i].lf != NULL)
+		while (op[i].op != NULL)
 		{
-			if (op[i].lf[0] == format[j])
+			if (op[i].op[0] == format[j])
 			{
 				printf("%s", separator);
 				op[i].f(ap);

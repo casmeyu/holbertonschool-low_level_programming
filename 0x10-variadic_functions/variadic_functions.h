@@ -1,18 +1,17 @@
-#ifndef _VARIADIC_FUNCTIONS_H
-#define _VARIADIC_FUNCTIONS_H
+#ifndef VARIADICF_H
+#define VARIADICF_H
 
 #include <stdarg.h>
 /**
- * struct all - struct all
+ * struct op_t - option structure
  *
- *@char: letter for possible formats
+ *@op: format
  *@f: function associated
  */
-typedef struct all
-{
-	char *lf;
+typedef struct {
+	char *op;
 	void (*f)(va_list ap);
-}datatype;
+}op_t;
 
 void print_char(va_list ap);
 void print_integer(va_list ap);
