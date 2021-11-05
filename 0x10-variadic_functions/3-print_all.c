@@ -1,66 +1,20 @@
-#include <stdarg.h>
-#include <stddef.h>
 #include <stdio.h>
+#include <stdarg.h>
 #include "variadic_functions.h"
-/**
- * print_char - prints a character
- *
- * @ap: list with character to be printed
- */
-void print_char(va_list ap)
-{
-	printf("%c", va_arg(ap, int));
-}
 
 /**
- * print_int - prints an integer
- *
- * @ap: list with integer to be printed
- */
-void print_int(va_list ap)
-{
-	printf("%d", va_arg(ap, int));
-}
-
-/**
- * print_float - prints a float number
- *
- * @ap: list with float to print
- */
-void print_float(va_list ap)
-{
-	printf("%f", va_arg(ap, double));
-}
-
-/**
- * print_string - prints a string
- *
- * @ap: list with string to be printed
- */
-void print_string(va_list ap)
-{
-	char *s = va_arg(ap, char *);
-
-	if (s)
-		printf("%s", s);
-	else
-		printf("(nil)");
-}
-
-/**
- * print_all - prints anything (mini printf)
- *
+ * print_all - prints anything
  * @format: list of types of arguments
- *
+ * Return: void
  */
 void print_all(const char * const format, ...)
 {
 	va_list ap;
 	char *separator = "";
 	unsigned int i, j = 0;
-	op_t op[] = {
+	datatype op[] = {
 		{"c", print_char},
-		{"i", print_int},
+		{"i", print_integer},
 		{"f", print_float},
 		{"s", print_string},
 		{NULL, NULL}
@@ -70,9 +24,9 @@ void print_all(const char * const format, ...)
 	while (format != NULL && format[j] != '\0')
 	{
 		i = 0;
-		while (op[i].op != NULL)
+		while (op[i].lf != NULL)
 		{
-			if (op[i].op[0] == format[j])
+			if (op[i].lf[0] == format[j])
 			{
 				printf("%s", separator);
 				op[i].f(ap);
@@ -84,4 +38,53 @@ void print_all(const char * const format, ...)
 	}
 	va_end(ap);
 	printf("\n");
+}
+
+/**
+ * print_char - prints a char
+ * @ap: va_list
+ * Return: void
+ */
+
+void print_char(va_list ap)
+{
+	printf("%c", va_arg(ap, int));
+}
+
+/**
+ * print_integer - prints an int
+ *@ap: va_list
+ *Return: void
+ */
+void print_integer(va_list ap)
+{
+	printf("%d", va_arg(ap, int));
+}
+
+/**
+ * print_float - print a floater
+ * @ap: va_list
+ * Return: void
+ */
+void print_float(va_list ap)
+{
+	printf("%f", va_arg(ap, double));
+}
+
+/**
+ * print_string - print a string
+ * @ap: va_list
+ * Return: void
+ */
+
+void print_string(va_list ap)
+{
+	char *s = va_arg(ap, char *);
+
+	if (s == NULL)
+	{
+		printf("(nil)");
+		return;
+	}
+	printf("%s", s);
 }
