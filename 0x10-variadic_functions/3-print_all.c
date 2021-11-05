@@ -51,40 +51,37 @@ void print_string(va_list ap)
  * print_all - prints anything (mini printf)
  *
  * @format: list of types of arguments
+ *
  */
 void print_all(const char * const format, ...)
 {
 	va_list ap;
-	unsigned int pos_ops = 0, pos_for = 0;
 	char *separator = "";
-	op_t ops[] = {
+	unsigned int i, j = 0;
+	op_t op[] = {
 		{"c", print_char},
 		{"i", print_int},
 		{"f", print_float},
 		{"s", print_string},
 		{NULL, NULL}
 	};
-
 	va_start(ap, format);
 
-	while (format && format[pos_for])
+	while (format != NULL && format[j] != '\0')
 	{
-		while (ops[pos_ops].op)
+		i = 0;
+		while (op[i].op != NULL)
 		{
-			if (ops[pos_ops].op[0] == format[pos_for])
+			if (op[i].op[0] == format[j])
 			{
 				printf("%s", separator);
-				ops[pos_ops].f(ap);
+				op[i].f(ap);
 				separator = ", ";
 			}
-			pos_ops++;
-
+			i++;
 		}
-		pos_ops = 0;
-		pos_for++;
+		j++;
 	}
+	va_end(ap);
 	printf("\n");
-
 }
-
-
