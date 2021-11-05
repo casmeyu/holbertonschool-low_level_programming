@@ -5,13 +5,12 @@
 /**
  * print_all - prints anything
  * @format: list of types of arguments
- * Return: void
  */
 void print_all(const char * const format, ...)
 {
 	va_list ap;
 	char *separator = "";
-	unsigned int i, j = 0;
+	unsigned int pos_op, pos_f = 0;
 	op_t op[] = {
 		{"c", print_char},
 		{"i", print_integer},
@@ -21,20 +20,20 @@ void print_all(const char * const format, ...)
 	};
 	va_start(ap, format);
 
-	while (format != NULL && format[j] != '\0')
+	while (!format && format[pos_f])
 	{
-		i = 0;
-		while (op[i].op != NULL)
+		pos_op = 0;
+		while (op[pos_op].op != NULL)
 		{
-			if (op[i].op[0] == format[j])
+			if (op[pos_op].op[0] == format[pos_f])
 			{
 				printf("%s", separator);
-				op[i].f(ap);
+				op[pos_op].f(ap);
 				separator = ", ";
 			}
-			i++;
+			pos_op++;
 		}
-		j++;
+		pos_f++;
 	}
 	va_end(ap);
 	printf("\n");
@@ -43,7 +42,6 @@ void print_all(const char * const format, ...)
 /**
  * print_char - prints a char
  * @ap: va_list
- * Return: void
  */
 
 void print_char(va_list ap)
@@ -52,9 +50,9 @@ void print_char(va_list ap)
 }
 
 /**
- * print_integer - prints an int
+ * print_integer - prints an integer
+ *
  *@ap: va_list
- *Return: void
  */
 void print_integer(va_list ap)
 {
@@ -62,9 +60,9 @@ void print_integer(va_list ap)
 }
 
 /**
- * print_float - print a floater
+ * print_float - print a float number
+ *
  * @ap: va_list
- * Return: void
  */
 void print_float(va_list ap)
 {
@@ -72,9 +70,9 @@ void print_float(va_list ap)
 }
 
 /**
- * print_string - print a string
+ * print_string - prints a string
+ * 
  * @ap: va_list
- * Return: void
  */
 
 void print_string(va_list ap)
