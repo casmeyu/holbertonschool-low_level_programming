@@ -4,6 +4,7 @@
 
 /**
  * print_all - prints anything
+ *
  * @format: list of types of arguments
  */
 void print_all(const char * const format, ...)
@@ -41,7 +42,8 @@ void print_all(const char * const format, ...)
 
 /**
  * print_char - prints a char
- * @ap: va_list
+ *
+ * @ap: list of arguments
  */
 
 void print_char(va_list ap)
@@ -52,7 +54,7 @@ void print_char(va_list ap)
 /**
  * print_integer - prints an integer
  *
- *@ap: va_list
+ *@ap: list of arguments
  */
 void print_integer(va_list ap)
 {
@@ -62,7 +64,7 @@ void print_integer(va_list ap)
 /**
  * print_float - print a float number
  *
- * @ap: va_list
+ * @ap: list of arguments
  */
 void print_float(va_list ap)
 {
@@ -72,7 +74,7 @@ void print_float(va_list ap)
 /**
  * print_string - prints a string
  * 
- * @ap: va_list
+ * @ap: lsit of arguments
  */
 
 void print_string(va_list ap)
