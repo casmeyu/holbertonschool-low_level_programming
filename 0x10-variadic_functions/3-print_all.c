@@ -40,8 +40,11 @@ void print_float(va_list ap)
 void print_string(va_list ap)
 {
 	char *s = va_arg(ap, char *);
-	
-	(s) ? printf("%s", s) : printf("(nil)");
+
+	if (s)
+		printf("%s", s);
+	else
+		printf("(nil)");	
 }
 
 /**
@@ -53,6 +56,7 @@ void print_all(const char * const format, ...)
 {
 	va_list ap;
 	unsigned int pos_ops = 0, pos_for = 0;
+	char *separator = "";
 	op_t ops[] = {
 		{"c", print_char},
 		{"i", print_int},
@@ -69,9 +73,9 @@ void print_all(const char * const format, ...)
 		{
 			if (ops[pos_ops].op[0] == format[pos_for])
 			{
+				printf("%s", separator);
 				ops[pos_ops].f(ap);
-				if (ops[pos_ops + 1].op)
-					printf(", ");
+				separator = ", ";
 			}
 			pos_ops++;
 
