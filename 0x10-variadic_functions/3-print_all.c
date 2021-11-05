@@ -44,7 +44,7 @@ void print_string(va_list ap)
 	if (s)
 		printf("%s", s);
 	else
-		printf("(nil)");	
+		printf("(nil)");
 }
 
 /**
@@ -67,7 +67,7 @@ void print_all(const char * const format, ...)
 
 	va_start(ap, format);
 
-	while (format[pos_for])
+	while (format && format[pos_for])
 	{
 		while (ops[pos_ops].op)
 		{
