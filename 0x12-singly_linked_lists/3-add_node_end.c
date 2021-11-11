@@ -5,25 +5,14 @@
  * @str: value of new head->str
  * Return: the linked list
  */
-list_t *add_node(list_t **head, const char *str)
+list_t *add_node(list_t **head, __attribute__((unused)) const char *str)
 {
-	list_t new;
 
-	if (*head->next)
-		add_node_end(head->next, str);
-	else
+	if (head)
 	{
-		new = malloc(sizeof(*new));
-
-		if (!new)
-			return (*head);
-
-		new->str = strdup(str);
-		new->len = strlen(new->str);
-		new->next = NULL;
-
-		*head->next = new
+		while ((*head)->next)
+			*head = (*head)->next;
 	}
 
-	return (new);
+	return (*head);
 }
