@@ -8,7 +8,6 @@
  */
 void main(int argc, char *argv[])
 {
-	unsigned char *j = 0;
 	int i, nbytes;
 
 	if (argc != 2)
@@ -24,10 +23,10 @@ void main(int argc, char *argv[])
 		printf("Error\n");
 		exit(2);
 	}
-
+	
 	for (i = 0; i < nbytes; i++)
 	{
-		printf("%02x ", *j + i);
+		printf("%d ", *(unsigned char *)main + i);
 	}
 
 	printf("\n");
