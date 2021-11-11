@@ -7,10 +7,9 @@
  */
 list_t *add_node_end(list_t **head, __attribute__((unused)) const char *str)
 {
-	list_t *current = *head;
 	list_t *new;
 
-	if (!current)
+	if (!(*head))
 	{
 		if (!str)
 			str = "\0";
@@ -29,7 +28,7 @@ list_t *add_node_end(list_t **head, __attribute__((unused)) const char *str)
 	}
 	else
 	{
-		add_node_end(&(current->next), str);
+		add_node_end((&(*head)->next), str);
 	}
 
 	return (NULL);
