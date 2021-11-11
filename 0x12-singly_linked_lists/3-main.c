@@ -40,6 +40,7 @@ int main(void)
     add_node_end(&head, "Victor");
     add_node_end(&head, "Walton");
     add_node_end(NULL, "Felipe");
+    add_node_end(NULL, NULL);
     print_list(head);
     return (0);
 }
