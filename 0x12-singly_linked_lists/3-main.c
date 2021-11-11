@@ -11,6 +11,7 @@ int main(void)
 
     head = NULL;
     add_node_end(&head, "Anne");
+    add_node_end(&head, NULL);
     add_node_end(&head, "Colton");
     add_node_end(&head, "Corbin");
     add_node_end(&head, "Daniel");
@@ -38,6 +39,7 @@ int main(void)
     add_node_end(&head, "Timothy");
     add_node_end(&head, "Victor");
     add_node_end(&head, "Walton");
+    add_node_end(NULL, "Felipe");
     print_list(head);
     return (0);
 }

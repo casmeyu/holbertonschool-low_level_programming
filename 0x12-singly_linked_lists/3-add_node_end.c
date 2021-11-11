@@ -5,9 +5,12 @@
  * @str: value of new tail->str
  * Return: the new tail
  */
-list_t *add_node_end(list_t **head, __attribute__((unused)) const char *str)
+list_t *add_node_end(list_t **head, const char *str)
 {
 	list_t *new;
+
+	if (!head)
+		return (NULL);
 
 	if (!(*head))
 	{
@@ -24,7 +27,7 @@ list_t *add_node_end(list_t **head, __attribute__((unused)) const char *str)
 
 		*head = new;
 
-		return (*head);
+		return (new);
 	}
 	else
 	{
