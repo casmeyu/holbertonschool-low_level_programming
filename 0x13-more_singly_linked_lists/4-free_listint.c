@@ -7,8 +7,6 @@
  */
 void free_listint(listint_t *head)
 {
-	listint_t *tmp_node;
-
 	if (head)
 	{
 		free_listint(head->next);
