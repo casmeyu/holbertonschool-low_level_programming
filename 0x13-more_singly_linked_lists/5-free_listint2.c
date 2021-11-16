@@ -6,8 +6,8 @@
 void free_listint2(listint_t **head)
 {
 	listint_t *tmp_node;
-	
-	while(*head)
+
+	while (*head)
 	{
 		tmp_node = *head;
 		(*head) = (*head)->next;
