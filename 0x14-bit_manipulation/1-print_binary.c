@@ -25,5 +25,7 @@ void print_binary(unsigned long int n)
 		}
 		else if (flag > 0)
 			_putchar('0');
+
+		aux_n >>= 1;
 	}
 }
