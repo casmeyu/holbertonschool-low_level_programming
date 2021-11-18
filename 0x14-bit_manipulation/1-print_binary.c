@@ -6,7 +6,7 @@
 void print_binary(unsigned long int n)
 {
 	unsigned long int mask = 32768;
-	char flag;
+	int flag = 0;
 
 	if (n == 0)
 		_putchar('0');
