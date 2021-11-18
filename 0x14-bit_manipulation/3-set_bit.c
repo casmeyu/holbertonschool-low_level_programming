@@ -20,7 +20,7 @@ int set_bit(unsigned long int *n, unsigned int index)
 		if (pos == index)
 		{
 			if (*n & 1)
-				return (1);
+				return(1);
 				/*n>>pos already is: 1*/
 			else
 			{
@@ -30,5 +30,5 @@ int set_bit(unsigned long int *n, unsigned int index)
 		aux_n >>= 1;
 	}
 
-	return (-1);
+	return(1);
 }
