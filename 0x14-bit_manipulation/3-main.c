@@ -10,9 +10,6 @@ int main(void)
 {
     unsigned long int n;
 
-    n = 10;
-    set_bit(&n, 2);
-    printf("%lu\n", n);
     n = 1024;
     set_bit(&n, 5);
     printf("%lu\n", n);
