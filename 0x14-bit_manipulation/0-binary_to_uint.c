@@ -6,18 +6,18 @@
  * @n: exponent
  * Return: x ^ n
  */
-int _pow(int x,int n)
+int _pow(int x, int n)
 {
 	int i, res = 1;
 
 	for (i = 0; i < n; i++)
 		res *= x;
 
-	return(res);
+	return (res);
 }
 
 /**
- * binaty_to_int - converts a binary number to an unsigned int
+ * binary_to_uint - converts a binary number to an unsigned int
  * @b: pointer to a string composed of 0 and 1 chars
  * Return: converted number or 0 if (b == NULL | b[x] != (0 | 1))
  */
@@ -43,6 +43,6 @@ unsigned int binary_to_uint(const char *b)
 			result += _pow(2, pos);
 		pos++;
 	}
-	
+
 	return (result);
 }
