@@ -5,23 +5,18 @@
  */
 void print_binary(unsigned long int n)
 {
-	unsigned long int mask = 32768;
-	int flag = 0;
+	unsigned long int mask = 1;
 
 	if (n == 0)
 		_putchar('0');
 	else
-		while (mask)
+		while (n)
 		{
 			if (n & mask)
-			{
-				if (flag == 0)
-					flag = 1;
 				_putchar('1');
-			}
-			else if (flag == 1)
+			else 
 				_putchar('0');
 
-			mask >>= 1;
+			n >>= 1;
 		}
 }
