@@ -10,7 +10,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 {
 
 	int f_desc;
-	ssize_t pos_b;
+	ssize_t len;
 	char *buffer = NULL;
 
 	if (!filename)
@@ -26,23 +26,21 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (!buffer)
 		return (0);
 
-	if (!read(f_desc, buffer, letters))
+	len = read(f_desc, buffer, letters); 
+	if (len < 0)
 	{
 		free(buffer);
 		return (0);
 	}
 
-	for (pos_b = 0; buffer[pos_b]; pos_b++)
-	{
-		continue;
-	}
+	len = write(1, buffer, len);
 
-	if(!write(1, buffer, pos_b))
+	if(len < 0)
 	{
 		free(buffer);
 		return (0);
 	}
 
 	free(buffer);
-	return (pos_b);
+	return (len);
 }
