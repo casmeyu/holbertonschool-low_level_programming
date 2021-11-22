@@ -9,7 +9,9 @@
  */
 size_t read_textfile(const char *filename, size_t letters)
 {
+
 	int f_desc;
+	size_t pos_b;
 	char *buffer = NULL;
 
 	if (!filename)
@@ -28,9 +30,13 @@ size_t read_textfile(const char *filename, size_t letters)
 	if (read(f_desc, buffer, letters) < 0)
 		return (0);
 
+	for (pos_b = 0; buffer[pos_b]; pos_b++)
+	{
+		continue;
+	}
+
 	printf("%s", buffer);
 
 
-
-	return (letters);
+	return (pos_b);
 }
