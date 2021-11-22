@@ -9,7 +9,7 @@
  */
 int create_file(const char *filename, char *text_content)
 {
-	int f_desc, pos_t, pos_b = 0;
+	int f_desc, len, pos_t, pos_b = 0;
 	char buffer[1024];
 
 	if (!filename)
@@ -26,8 +26,10 @@ int create_file(const char *filename, char *text_content)
 		buffer[pos_b] = text_content[pos_t];
 		pos_b++;
 	}
-
-	if (!write(f_desc, buffer, pos_b))
+	
+	len = write(f_desc, buffer, pos_b);
+	
+	if (len == -1)
 	{
 		close(f_desc);
 		return (-1);
