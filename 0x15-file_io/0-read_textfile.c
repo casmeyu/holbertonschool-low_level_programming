@@ -27,7 +27,10 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 
 	if (!read(f_desc, buffer, letters))
+	{
+		free(buffer);
 		return (0);
+	}
 
 	for (pos_b = 0; buffer[pos_b]; pos_b++)
 	{
@@ -35,8 +38,11 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	}
 
 	if(!write(1, buffer, pos_b))
+	{
+		free(buffer);
 		return (0);
+	}
 
-
+	free(buffer);
 	return (pos_b);
 }
