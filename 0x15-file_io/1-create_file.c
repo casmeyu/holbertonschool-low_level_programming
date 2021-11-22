@@ -20,15 +20,19 @@ int create_file(const char *filename, char *text_content)
 	if (f_desc == -1)
 		return (-1);
 
-
+	if (!text_content)
+	{
+		close(f_desc);
+		return (-1);
+	}
 	for (pos_t = 0; text_content[pos_t]; pos_t++)
 	{
 		buffer[pos_b] = text_content[pos_t];
 		pos_b++;
 	}
-	
+
 	len = write(f_desc, buffer, pos_b);
-	
+
 	if (len == -1)
 	{
 		close(f_desc);
