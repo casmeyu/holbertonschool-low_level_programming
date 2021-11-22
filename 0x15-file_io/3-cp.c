@@ -36,7 +36,7 @@ int main(int argc, char *argv[])
 			exit(98);
 		}
 		lwrite = write(file_to, buffer, lbuf);
-		if (lwrite != lbuf)
+		if (lwrite == -1 || lwrite != lbuf)
 		{
 			dprintf(STDOUT_FILENO, "Error: Can't write to %s\n", argv[2]);
 			exit(99);
