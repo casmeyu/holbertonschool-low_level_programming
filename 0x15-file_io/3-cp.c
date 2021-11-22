@@ -36,7 +36,7 @@ int main(int argc, char *argv[])
 			exit(98);
 		}
 		lwrite = write(file_to, buffer, lbuf);
-		if (lwrite == -1 || lwrite != lbuf)
+		if (lwrite != lbuf)
 		{
 			dprintf(STDOUT_FILENO, "Error: Can't write to %s\n", argv[2]);
 			exit(99);
@@ -44,9 +44,9 @@ int main(int argc, char *argv[])
 
 	}
 	if (close(file_from) == -1)
-		dprintf(STDOUT_FILENO, "Error: Can't close fd %s\n", argv[1]), exit(100);
+		dprintf(STDOUT_FILENO, "Error: Can't close fd %d\n", file_from), exit(100);
 	if (close(file_to) == -1)
-		dprintf(STDOUT_FILENO, "Error: Can't close fd %s\n", argv[2]), exit(100);
+		dprintf(STDOUT_FILENO, "Error: Can't close fd %d\n", file_to), exit(100);
 
 	return (0);
 }
