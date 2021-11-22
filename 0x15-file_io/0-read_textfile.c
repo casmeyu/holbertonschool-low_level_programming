@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 #include <stdlib.h>
 /**
  * read_textfile - reads a text file and prints it to stdout
@@ -27,7 +26,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (!buffer)
 		return (0);
 
-	if (read(f_desc, buffer, letters) < 0)
+	if (!read(f_desc, buffer, letters))
 		return (0);
 
 	for (pos_b = 0; buffer[pos_b]; pos_b++)
@@ -35,7 +34,8 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		continue;
 	}
 
-	write(1, buffer, pos_b);
+	if(!write(1, buffer, pos_b))
+		return (0);
 
 
 	return (pos_b);
