@@ -35,7 +35,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		continue;
 	}
 
-	printf("%s", buffer);
+	write(1, buffer, pos_b);
 
 
 	return (pos_b);
