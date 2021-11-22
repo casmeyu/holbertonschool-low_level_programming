@@ -23,7 +23,7 @@ int create_file(const char *filename, char *text_content)
 	if (!text_content)
 	{
 		close(f_desc);
-		return (-1);
+		return (1);
 	}
 	for (pos_t = 0; text_content[pos_t]; pos_t++)
 	{
