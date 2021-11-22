@@ -7,11 +7,11 @@
  * @letters: number of lettes it should read and print
  * Return: number of printed letters
  */
-size_t read_textfile(const char *filename, size_t letters)
+ssize_t read_textfile(const char *filename, size_t letters)
 {
 
 	int f_desc;
-	size_t pos_b;
+	ssize_t pos_b;
 	char *buffer = NULL;
 
 	if (!filename)
