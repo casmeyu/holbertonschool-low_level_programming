@@ -3,8 +3,8 @@
 
 /**
  * create_file - creates a file with given and data and rw permissions
- * @filename - name of file to create
- * @text_content - fata for the created file
+ * @filename: name of file to create
+ * @text_content: fata for the created file
  * Return: 1 on success and -1 on failure
  */
 int create_file(const char *filename, char *text_content)
@@ -26,9 +26,9 @@ int create_file(const char *filename, char *text_content)
 		buffer[pos_b] = text_content[pos_t];
 		pos_b++;
 	}
-	
-	if(!write(f_desc, buffer, pos_b))
-	{	
+
+	if (!write(f_desc, buffer, pos_b))
+	{
 		close(f_desc);
 		return (-1);
 	}
