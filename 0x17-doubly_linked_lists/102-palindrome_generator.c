@@ -40,7 +40,7 @@ int main(void)
 			}
 			if (flag == 1)
 			{
-				printf("palindrome is: %s\n", to_s);
+				printf("palindrome %d * %d -> %s\n", n1, n2, to_s);
 				if (atoi(to_s) > res)
 					res = atoi(to_s);
 			}
