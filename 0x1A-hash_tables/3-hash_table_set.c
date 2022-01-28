@@ -19,6 +19,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		return (0);
 	key_idx = key_index(dupkey, ht->size);
 
+	if (key_idx >= ht->size)
+		return (0);
 	ht->array[key_idx] = add_hash_node(&(ht->array[key_idx]), value, key);
 
 	return (1);
