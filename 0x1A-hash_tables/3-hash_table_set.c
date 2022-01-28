@@ -11,34 +11,38 @@
  */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	unsigned long int i;
-	unsigned const char *dupkey;
 	unsigned long int key_idx;
+
+	unsigned const char *dupkey = (unsigned const char *)key;
 
 	if (!ht | !key | !value)
 		return (0);
-	dupkey = (unsigned const char *)key;
-	key_idx = hash_djb2(dupkey);
-	add_hash_node(ht->array[key_idx], value);
+	key_idx = key_index(dupkey, ht->size);
 
-	for (i = 0; ht->array[i]; i++)
-	{
-		printf("%s\n", ht->array[i]->value);
-	}	
+	ht->array[key_idx] = add_hash_node(&(ht->array[key_idx]), value, key);
+
 	return (1);
 }
 
-hash_node_t *add_hash_node(hash_node_t *head, const char *value)
+/**
+ * add_hash_node - adds a node to a hash table at a given index
+ * @h: head of the node
+ * @val: value to assign to the node
+ * @key: key associated with the node
+ *
+ * Return: the new node of NULL if it fails
+ */
+hash_node_t *add_hash_node(hash_node_t **h, const char *val, const char *key)
 {
 	hash_node_t *new_node;
 
 	new_node = malloc(sizeof(*new_node));
 	if (!new_node)
-		return(NULL);
-	new_node->value = value;
-	new_node->next = head;
+		return (NULL);
+	new_node->key = strdup(key);
+	new_node->value = strdup(val);
+	new_node->next = *h;
 
-	head = new_node;
-
-	return (head);
+	*h = new_node;
+	return (*h);
 }
