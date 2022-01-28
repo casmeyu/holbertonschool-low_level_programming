@@ -15,7 +15,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	unsigned const char *dupkey = (unsigned const char *)key;
 
-	if (!ht | !key | !value)
+	if (!ht | !key)
 		return (0);
 	key_idx = key_index(dupkey, ht->size);
 
