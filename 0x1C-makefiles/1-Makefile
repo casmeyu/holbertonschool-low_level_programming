@@ -1,7 +1,8 @@
 # -*- Makefile with variables-*-
 CC = gcc
 SRC = main.c school.c
+
 all: school
 
 school: $(SRC)
-	$(CC) -Wall -Werror -pedantic main.c school.c -o school
+	$(CC) -Wall -Werror -pedantic $(SRC) -o school
