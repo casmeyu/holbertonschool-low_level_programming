@@ -1,0 +1,2 @@
+school: main.c school.c
+	gcc -Wall -Werror -pedantic main.c school.c -o school
