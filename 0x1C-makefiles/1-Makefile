@@ -1,0 +1,7 @@
+# -*- Makefile -*-
+CC=gcc
+SRC=main.c school.c
+all: school
+
+school: $(SRC)
+	$(CC) -Wall -Werror -pedantic main.c school.c -o school
