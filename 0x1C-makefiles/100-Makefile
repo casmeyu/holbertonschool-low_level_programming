@@ -10,9 +10,6 @@ all: $(NAME)
 $(NAME): $(OBJ) m.h
 	$(CC) $(OBJ) -o $(NAME)
 
-.PHONY: fclean
-fclean: clean oclean
-
 .PHONY: clean
 clean:
 	$(RM) *.swp *~ $(NAME)
@@ -21,5 +18,7 @@ clean:
 oclean:
 	$(RM) $(OBJ)
 
+.PHONY: fclean
+fclean: clean oclean
 .PHONY: re
 re: fclean all 
