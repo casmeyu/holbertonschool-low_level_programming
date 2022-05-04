@@ -20,7 +20,7 @@ int binary_search(int *array, size_t size, int value)
 	{
 		if (idx != 0)
 			printf(", ");
-		printf("%d ", array[idx]);
+		printf("%d", array[idx]);
 	}
 	printf("\n");
 	idx = ((size - 1) / 2);
